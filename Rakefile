@@ -19,7 +19,7 @@ PadrinoTasks.init
 if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
   task :travis do
-  ["rake spec_report", "rake cucumber"].each do |cmd|
+  ["rake spec_report"].each do |cmd|
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && bundle exec #{cmd}")
     raise "#{cmd} failed!" unless $?.exitstatus == 0
