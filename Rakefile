@@ -41,6 +41,7 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
   	task.cucumber_opts = ["features"]
 	end
 
+require 'cucumber/rake/task'
   Cucumber::Rake::Task.new(:cucumber_report) do |task|
     Rake::Task['db:migrate'].invoke
     task.cucumber_opts = ['features', '--format html -o reports/cucumber.html']
