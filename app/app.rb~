@@ -1,4 +1,4 @@
-module Funqui
+module Projecto
   class App < Padrino::Application
     register Padrino::Rendering
     register Padrino::Mailer
@@ -6,7 +6,7 @@ module Funqui
 
     enable :sessions
 
-class Funqui::App
+class Projecto::App
   get '/' do
     "Hello World"
   end
