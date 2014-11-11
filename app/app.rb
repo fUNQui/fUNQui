@@ -3,14 +3,12 @@ module Funqui
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Padrino::Sprockets
+
+    sprockets :minify => (Padrino.env == :production)
 
     enable :sessions
 
-class Funqui::App
-  get '/' do
-    "Hello World"
-  end
-end
 	
     ##
     # Caching support

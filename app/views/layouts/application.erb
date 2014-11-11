@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <meta charset="utf-8">
+		<title>fUNQui</title>
+	<%= stylesheet_link_tag "/assets/application.css" %>
+		
+	</head>
+	<body>
+		<div class="container">
+
+      <div class="container">
+			  <div>
+			    <%= [:error, :warning, :success, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => true) }.join.html_safe %>
+			  </div>
+
+      	<%= yield %>
+
+      </div>
+      <!-- footer -->
+      <div class="footer">
+      	<hr/>
+        <p>fUNQui by Skalic julian, Leandro Moscheni and Tehuel Torres Baldi | 2014</p>
+      </div>
+
+    </div> 
+
+		<%= javascript_include_tag '/assets/application' %> 
+		</body>
+</html>

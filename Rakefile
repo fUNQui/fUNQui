@@ -19,7 +19,7 @@ PadrinoTasks.init
 if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
   task :travis do
-  ["rake spec_report"].each do |cmd|
+  ["rake spec_report",  "rake spec", "rake cucumber"].each do |cmd|
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && bundle exec #{cmd}")
     raise "#{cmd} failed!" unless $?.exitstatus == 0
@@ -50,7 +50,7 @@ require 'cucumber/rake/task'
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec) do |t|
     t.pattern = "./spec/**/*_spec.rb"
-    t.rspec_opts = %w(-fs --color)
+    t.rspec_opts = ["spec"]
   end
 
   require 'rspec/core/rake_task'

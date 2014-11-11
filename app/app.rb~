@@ -3,14 +3,12 @@ module Projecto
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Padrino::Sprockets
+
+    sprockets :minify => (Padrino.env == :production)
 
     enable :sessions
 
-class Projecto::App
-  get '/' do
-    "Hello World"
-  end
-end
 	
     ##
     # Caching support

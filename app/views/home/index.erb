@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  <h1>Nuevo torneo</h1>
+<% form_for(@torneo, '/home/create') do |f| %> 
+	<%= f.label :nombre %>
+	<%= f.text_field :nombre %>
+	<%= f.label :fecha %>
+ 	<%= f.text_field :fecha %>
+ 	<%= f.label :comentario %>
+ 	<%= f.text_field :comentario %>
+  <br/>
+  <%= f.submit "Crear", :class => "btn btn-primary" %>
+<% end %>
+
+<table class="table table-bordered">
+	<tr>
+		<th>Nombre</th>
+		<th>Fecha</th>
+		<th>Comentario</th>
+	</tr>
+	<% @torneos.each do |torneo| %>
+
+	<tr>
+		<td>
+			<%= torneo.nombre %>
+		</td>
+		<td>
+			<%= torneo.fecha %>
+		</td>
+		<td>
+			<%= torneo.comentario %>
+		</td>			
+	</tr>
+
+  <% end %>
+
+</table>
+</div>

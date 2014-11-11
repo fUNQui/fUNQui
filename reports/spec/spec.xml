@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="0" failures="0" errors="0" time="0.000273" timestamp="2014-11-09T01:48:59-03:00">
+<testsuite name="rspec" tests="3" failures="0" errors="0" time="0.003256" timestamp="2014-11-10T23:28:56-03:00">
   <properties/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #nombre" time="0.002519"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #fecha" time="0.000120"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #comentario" time="0.000092"/>
 </testsuite>
