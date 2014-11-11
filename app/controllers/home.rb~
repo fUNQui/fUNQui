@@ -1,4 +1,4 @@
-Projecto::App.controllers :home do
+Funqui::App.controllers :home do
   
   get :index, :map => '/' do  
     @torneo=Torneo.new

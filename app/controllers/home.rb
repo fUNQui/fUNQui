@@ -13,7 +13,6 @@ Funqui::App.controllers :home do
         flash[:success] = 'Torneo creado'
 	      render 'home/index'
       else
-        flash[:error] = 'Todos los campos son requeridos'
         render 'home/index'
       end
 

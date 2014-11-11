@@ -18,10 +18,12 @@ Feature: Pagina de crear torneos
 		And Ingreso un comentario "Gran torneo de futboll 5"
 		And Apreto el boton crear
 		Then No hay un torneo creado
+		And Veo un mensaje de "Todos los campos son requeridos"	
 
 	Scenario: Error al crear torneo por información faltante en el campo nombre
 		Given Estoy en la pagina de crear torneos
 		And Ingreso la fecha "15/11/2014"
 		And Ingreso un comentario "Gran torneo de futboll 5"
 		And Apreto el boton crear
-		Then No hay un torneo creado	
+		Then No hay un torneo creado
+		And Veo un mensaje de "Todos los campos son requeridos"	
