@@ -1,5 +1,5 @@
 Given(/^Estoy en la pagina de crear torneos$/) do
-  	visit '/'
+  	visit '/registrar/torneo'
 end
 
 When(/^Ingreso el nombre del torneo "(.*?)"$/) do |nombre|
@@ -8,6 +8,10 @@ end
 
 When(/^Ingreso la fecha "(.*?)"$/) do |fecha|
   	fill_in('torneo[fecha]', :with => fecha )
+end
+
+When(/^Ingreso el lugar "(.*?)"$/) do |lugar|
+    fill_in('torneo[lugar]', :with => lugar )
 end
 
 When(/^Ingreso un comentario "(.*?)"$/) do |comentario|
@@ -31,7 +35,7 @@ end
 
 
 Then(/^Veo un mensaje de "(.*?)"$/) do |content|
-	visit '/'
+	visit '/registrar/torneo'
   	page.should have_content(content)
 end
 

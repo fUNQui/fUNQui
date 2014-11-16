@@ -9,7 +9,7 @@ module Funqui
 
     enable :sessions
 
-	
+
     ##
     # Caching support
     #

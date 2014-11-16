@@ -5,27 +5,38 @@
         1,
         null,
         1,
-        4,
-        4,
-        4,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/controllers/torneo.rb": [
+        1,
+        null,
+        1,
+        5,
+        5,
+        5,
         null,
         null,
         1,
-        3,
-        3,
-        3,
         1,
         1,
         null,
-        2,
         null,
+        1,
+        4,
+        4,
+        4,
+        1,
         null,
+        4,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1415675162
+    "timestamp": 1416110663
   },
   "RSpec": {
     "coverage": {
@@ -104,12 +115,14 @@
         1,
         1,
         1,
+        1,
         null,
+        1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1415675150
+    "timestamp": 1416110651
   }
 }

@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <h1>Nuevo torneo</h1>
+<% form_for(@torneo, '/torneo/create') do |f| %> 
+	<%= f.label :nombre %>
+	<%= f.text_field :nombre, :required => "required" %>
+	<%= f.label :fecha %>
+ 	<%= f.text_field :fecha, :required => "required"%>
+ 	<%= f.label :lugar %>
+ 	<%= f.text_field :lugar, :required => "required" %>
+ 	<%= f.label :comentario %>
+ 	<%= f.text_field :comentario %>
+  <br/>
+  <%= f.submit "Crear", :class => "btn btn-primary" %>
+<% end %>
+</div>

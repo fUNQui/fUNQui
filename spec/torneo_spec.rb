@@ -10,6 +10,7 @@ describe Torneo do
 		it {should respond_to( :nombre)}
 		it {should respond_to( :fecha)}
 		it {should respond_to( :comentario)}
+		it {should respond_to( :lugar)}
 	end	
 
 end

@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+<div class="panel-heading">Torneos</div>
+<table class="table table-bordered table-hover table-condensed">
+	<tr>
+		<th>Nombre</th>
+		<th>Fecha</th>
+		<th>Lugar</th>
+		<th>Comentario</th>
+	</tr>
+	<% @torneos.each do |torneo| %>
+
+	<tr>
+		<td>
+			<%= torneo.nombre %>
+		</td>
+		<td>
+			<%= torneo.fecha %>
+		</td>
+		<td>
+			<%= torneo.lugar %>
+		</td>
+		<td>
+			<%= torneo.comentario %>
+		</td>			
+	</tr>
+
+  <% end %>
+
+</table>
+</div>
+</div>
