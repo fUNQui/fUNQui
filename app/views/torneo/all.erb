@@ -24,7 +24,8 @@
           <%= torneo.comentario %>
         </td>	
         <td>
-          <a href="#" class="btn btn-primary btn-xs">Agregar Equipos</a>
+          <%= link_to 'Ver Equipos', url_for(:equipo, :equipos, :torneo  => torneo.id), :class => "link" %>
+          <%= link_to 'Agregar Equipos', url_for(:equipo, :create, :torneo => torneo.id), :class => "link" %>
         </td>
       </tr>
 

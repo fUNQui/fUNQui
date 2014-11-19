@@ -1,7 +1,62 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/julian/Escritorio/Proyectos/Proyecto_fUNQui/fUNQui/app/controllers/home.rb": [
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/controllers/equipo.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/controllers/home.rb": [
         1,
         null,
         1,
@@ -10,7 +65,7 @@
         null,
         null
       ],
-      "/home/julian/Escritorio/Proyectos/Proyecto_fUNQui/fUNQui/app/controllers/torneo.rb": [
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/controllers/torneo.rb": [
         1,
         null,
         1,
@@ -53,11 +108,11 @@
         null
       ]
     },
-    "timestamp": 1416360234
+    "timestamp": 1416418707
   },
   "RSpec": {
     "coverage": {
-      "/home/julian/Escritorio/Proyectos/Proyecto_fUNQui/fUNQui/app/app.rb": [
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/app.rb": [
         1,
         1,
         1,
@@ -124,10 +179,34 @@
         null,
         null
       ],
-      "/home/julian/Escritorio/Proyectos/Proyecto_fUNQui/fUNQui/app/models/torneo.rb": [
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/models/equipo.rb": [
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/julian/Escritorio/Proyectos/fUNQui/app/models/torneo.rb": [
+        1,
+        1,
+        null,
+        1,
         1,
         1,
         1,
@@ -140,6 +219,6 @@
         null
       ]
     },
-    "timestamp": 1416360222
+    "timestamp": 1416418695
   }
 }

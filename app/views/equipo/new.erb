@@ -1,4 +1,4 @@
-<% form_for(@equipo, '/equipo/create', :class => "form-horizontal") do |f| %> 
+<% form_for(@equipo, "/equipo/create/#{@torneo.id}", :class => "form-horizontal") do |f| %> 
 
   <fieldset>
   <legend>Registrar nuevo equipo</legend>

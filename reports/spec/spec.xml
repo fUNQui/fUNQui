@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="4" failures="0" errors="0" time="0.003298" timestamp="2014-11-18T22:23:31-03:00">
+<testsuite name="rspec" tests="7" failures="0" errors="0" time="0.003632" timestamp="2014-11-19T14:38:04-03:00">
   <properties/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #nombre" time="0.002441"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #fecha" time="0.000117"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #comentario" time="0.000095"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #lugar" time="0.000093"/>
+  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #nombre" time="0.002288"/>
+  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #jugadores" time="0.000113"/>
+  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #dt" time="0.000106"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #nombre" time="0.000119"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #fecha" time="0.000090"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #comentario" time="0.000087"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #lugar" time="0.000087"/>
 </testsuite>
