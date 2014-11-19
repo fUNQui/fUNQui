@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Equipos</div>
+    <table class="table table-bordered table-hover table-condensed">
+      <tr>
+        <th>Nombre</th>
+        <th>Jugadores</th>
+        <th>DT</th>
+      </tr>
+      <% @equipos.each do |equipo| %>
+
+      <tr>
+        <td>
+          <%= equipo.nombre %>
+        </td>
+        <td>
+          <%= equipo.jugadores %>
+        </td>
+        <td>
+          <%= equipo.dt %>
+        </td>    
+      </tr>
+
+      <% end %>
+
+    </table>
+    <a class="btn" href="/registrar/equipo">Registrar Equipo</a>
+  </div>
+</div>
