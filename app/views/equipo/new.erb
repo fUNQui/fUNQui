@@ -1,13 +1,33 @@
-<div class="jumbotron">
-  <h1>Nuevo Equipo</h1>
-<% form_for(@equipo, '/equipo/create') do |f| %> 
-  <%= f.label :nombre %>
-  <%= f.text_field :nombre, :required => "required" %>
-  <%= f.label :jugadores %>
-  <%= f.text_field :jugadores, :required => "required"%>
-  <%= f.label :dt %>
-  <%= f.text_field :dt, :required => "required" %>
-  <br/>
-  <%= f.submit "Crear", :class => "btn btn-primary" %>
+<% form_for(@equipo, '/equipo/create', :class => "form-horizontal") do |f| %> 
+
+  <fieldset>
+  <legend>Registrar nuevo equipo</legend>
+    <div class="form-group">
+      <%= f.label :nombre, :class => "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :nombre, :class => "col-lg-10 form-control", :required => "require" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :jugadores, :class => "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :jugadores, :class => "col-lg-10 form-control", :required => "require" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :dt, :class => "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :dt, :class => "col-lg-10 form-control", :required => "require" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <%= f.submit "Crear", :class => "btn btn-primary" %>
+      </div>
+    </div>
+    
+  </fieldset>
 <% end %>
-</div>

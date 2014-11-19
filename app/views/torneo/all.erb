@@ -1,35 +1,39 @@
 <div class="panel panel-default">
-	<div class="panel-heading">Torneos</div>
-		<table class="table table-bordered table-hover table-condensed">
-			<tr>
-				<th>Nombre</th>
-				<th>Fecha</th>
-				<th>Lugar</th>
-				<th>Comentario</th>
-				<th>Acciones</th>
-			</tr>
-			<% @torneos.each do |torneo| %>
+  <div class="panel-heading">Torneos</div>
+    <table class="table table-bordered table-hover table-condensed">
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Lugar</th>
+        <th>Comentario</th>
+        <th>Acciones</th>
+      </tr>
+      <% @torneos.each do |torneo| %>
 
-			<tr>
-				<td>
-					<%= torneo.nombre %>
-				</td>
-				<td>
-					<%= torneo.fecha %>
-				</td>
-				<td>
-					<%= torneo.lugar %>
-				</td>
-				<td>
-					<%= torneo.comentario %>
-				</td>	
-				<td>
-					<a class="link" href="">Agregar equipo</a>		
-				</td>
-			</tr>
+      <tr>
+        <td>
+          <%= torneo.nombre %>
+        </td>
+        <td>
+          <%= torneo.fecha %>
+        </td>
+        <td>
+          <%= torneo.lugar %>
+        </td>
+        <td>
+          <%= torneo.comentario %>
+        </td>	
+        <td>
+          <a href="#" class="btn btn-primary btn-xs">Agregar Equipos</a>
+        </td>
+      </tr>
 
-		  <% end %>
+      <% end %>
 
-		</table>
-	</div>
+    </table>
+    
+  </div>
+  
+  <a href="/registrar/torneo" class="btn btn-primary">Registrar Nuevo Torneo</a>
+  
 </div>
