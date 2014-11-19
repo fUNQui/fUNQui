@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="7" failures="0" errors="0" time="0.003632" timestamp="2014-11-19T14:38:04-03:00">
+<testsuite name="rspec" tests="7" failures="0" errors="0" time="0.003576" timestamp="2014-11-19T14:40:11-03:00">
   <properties/>
-  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #nombre" time="0.002288"/>
+  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #nombre" time="0.002250"/>
   <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #jugadores" time="0.000113"/>
-  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #dt" time="0.000106"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #nombre" time="0.000119"/>
+  <testcase classname="spec.equipo_spec" name="Equipo modelo should respond to #dt" time="0.000091"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #nombre" time="0.000115"/>
   <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #fecha" time="0.000090"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #comentario" time="0.000087"/>
-  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #lugar" time="0.000087"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #comentario" time="0.000088"/>
+  <testcase classname="spec.torneo_spec" name="Torneo modelo should respond to #lugar" time="0.000101"/>
 </testsuite>
