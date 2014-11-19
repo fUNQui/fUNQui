@@ -23,9 +23,8 @@
       <% end %>
 
     </table>
-    
-  </div>
-  
-  
-  
 </div>
+
+<ul class="pager">
+  <li class="previous"><%= link_to '<- Anterior', url_for(:equipo, :create, :torneo => @torneo.id), :class => "btn btn-primary" %></li>
+</ul>

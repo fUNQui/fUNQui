@@ -41,7 +41,7 @@ Funqui::App.controllers :equipo do
       else
         if @equipo.save
           flash[:success] = "El equipo #{@equipo.nombre} fue creado exitosamente"
-          redirect "/equipo/equipos/#{@torneo.id}"
+          redirect "/equipo/create/#{@torneo.id}"
         else
           flash.now[:error] = "Error"
           render  "equipo/new"
