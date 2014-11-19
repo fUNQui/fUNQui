@@ -3,9 +3,10 @@ class Torneo
 	
 	property :id, Serial
   	property :nombre, String
-  	property :fecha, String
+  	property :fecha, Date
   	property :lugar, String
   	property :comentario, String
+    has n, :equipos
 
   	validates_presence_of :nombre
   	validates_presence_of :fecha

@@ -12,7 +12,7 @@
     <div class="form-group">
       <%= f.label :fecha, :class => "col-lg-2 control-label" %>
       <div class="col-lg-10">
-        <%= f.text_field :fecha, :class => "col-lg-10 form-control", :required => "require" %>
+        <%= f.text_field :fecha, :class => "col-lg-10 form-control", placeholder: "dd/mm/aaaa", type: "date", min:Date.today, :required => "require"%>
       </div>
     </div>
     
