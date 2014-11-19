@@ -18,24 +18,56 @@ When(/^Ingreso un comentario "(.*?)"$/) do |comentario|
   	fill_in('torneo[comentario]', :with => comentario )
 end
 
-When(/^Apreto el boton crear$/) do
-	click_button('Crear')
+When(/^Hago click en el boton crear$/) do
+    click_button('Crear')
 end
 
-Then(/^Hay un torneo creado$/) do
-  	@torneos = Torneo.all
-  	expect(@torneos.size).to eq(1)
-  	Torneo.all.destroy
+Then(/^Veo un mensaje de "(.*?)"$/) do |content|  
+    page.should have_content(content)
 end
 
-Then(/^No hay un torneo creado$/) do
-  	@torneos = Torneo.all
-  	expect(@torneos.size).to eq(0)
+Then(/^Hay un torneo creado con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
+    hayTorneo = false
+    Torneo.all.each do |t|
+        if((t.nombre==nombre) && (t.fecha==fecha) && (t.lugar==lugar))
+            hayTorneo = true
+            t.destroy
+        end
+    end
+    expect(hayTorneo).to eq(true)
 end
 
-
-Then(/^Veo un mensaje de "(.*?)"$/) do |content|
-	visit '/registrar/torneo'
-  	page.should have_content(content)
+Then(/^No hay dos torneos creados con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
+  count = 0
+    Torneo.all.each do |t|
+        if((t.nombre==nombre) && (t.fecha==fecha) && (t.lugar==lugar))
+            count = count + 1
+            t.destroy
+        end
+    end
+    expect(count).to eq(1)
+    count = 0
 end
 
+Then(/^No hay un torneo creado con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
+    hayTorneo = false
+    Torneo.all.each do |t|
+        if((t.nombre==nombre) && (t.fecha==fecha) && (t.lugar==lugar))
+            hayTorneo = true
+            t.destroy
+        end
+    end
+    expect(hayTorneo).to eq(false)
+end
+
+Then(/^Veo un mensaje en el campo "(.*?)"$/) do |content|
+    page.should have_content(content)
+end
+
+Given(/^Tengo un torneo creardo con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
+    @torneo = Torneo.new
+    @torneo.nombre = nombre
+    @torneo.fecha = fecha
+    @torneo.lugar = lugar
+    @torneo.save
+end

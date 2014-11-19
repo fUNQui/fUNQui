@@ -16,6 +16,7 @@ PadrinoTasks.use(:database)
 PadrinoTasks.use(:datamapper)
 PadrinoTasks.init
 
+puts "PADRINO_ENV: #{PADRINO_ENV}"
 if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
   task :travis do

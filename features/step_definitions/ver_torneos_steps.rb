@@ -16,5 +16,9 @@ Then(/^Veo la lista con todos los torneos registrados$/) do
   	page.should have_content(@torneo.fecha)
   	page.should have_content(@torneo.comentario)
   	page.should have_content(@torneo.lugar)
-  	Torneo.all.destroy
+  	Torneo.all.each do |torneo|
+      if(torneo.nombre == 'Funqui')
+        torneo.destroy
+      end
+    end
 end
