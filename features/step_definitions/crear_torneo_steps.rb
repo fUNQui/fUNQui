@@ -1,5 +1,6 @@
 Given(/^Estoy en la pagina de crear torneos$/) do
-  	visit '/registrar/torneo'
+  	Torneo.all.destroy
+    visit '/registrar/torneo'
 end
 
 When(/^Ingreso el nombre del torneo "(.*?)"$/) do |nombre|
@@ -29,7 +30,7 @@ end
 Then(/^Hay un torneo creado con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
     hayTorneo = false
     Torneo.all.each do |t|
-        if((t.nombre==nombre) && (t.fecha==fecha) && (t.lugar==lugar))
+        if((t.nombre==nombre) && (t.fecha.to_s == fecha) && (t.lugar==lugar))
             hayTorneo = true
             t.destroy
         end
@@ -40,7 +41,7 @@ end
 Then(/^No hay dos torneos creados con el nombre "(.*?)" y fecha "(.*?)" y lugar "(.*?)"$/) do |nombre, fecha, lugar|
   count = 0
     Torneo.all.each do |t|
-        if((t.nombre==nombre) && (t.fecha==fecha) && (t.lugar==lugar))
+        if((t.nombre==nombre) && (t.fecha.to_s==fecha) && (t.lugar==lugar))
             count = count + 1
             t.destroy
         end
