@@ -2,26 +2,9 @@
 
   <fieldset>
   <legend>Registrar nuevo equipo</legend>
-    <div class="form-group">
-      <%= f.label :nombre, :class => "col-lg-2 control-label" %>
-      <div class="col-lg-10">
-        <%= f.text_field :nombre, :class => "col-lg-10 form-control", :required => "require" %>
-      </div>
-    </div>
     
-    <div class="form-group">
-      <%= f.label :jugadores, :class => "col-lg-2 control-label" %>
-      <div class="col-lg-10">
-        <%= f.text_field :jugadores, :class => "col-lg-10 form-control", :required => "require" %>
-      </div>
-    </div>
+    <%= partial 'equipo/form', :locals => { :f => f } %>
     
-    <div class="form-group">
-      <%= f.label :dt, :class => "col-lg-2 control-label" %>
-      <div class="col-lg-10">
-        <%= f.text_field :dt, :class => "col-lg-10 form-control", :required => "require" %>
-      </div>
-    </div>
     
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
