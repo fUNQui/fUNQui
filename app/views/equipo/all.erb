@@ -5,6 +5,7 @@
         <th>Nombre</th>
         <th>Jugadores</th>
         <th>DT</th>
+        <th>Acciones</th>
       </tr>
       <% @equipos.each do |equipo| %>
 
@@ -18,6 +19,9 @@
         <td>
           <%= equipo.dt %>
         </td>    
+        <td>
+          <%= link_to 'Editar', url_for(:equipo, :edit, :equipo_id => equipo.id), :class => "link" %>
+        </td>
       </tr>
 
       <% end %>

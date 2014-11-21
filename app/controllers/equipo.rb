@@ -1,26 +1,28 @@
 Funqui::App.controllers :equipo do
   
-  get :new, :map => '/registrar/equipo' do  
-    @equipo = Equipo.new
-    @equipos = Equipo.all
-    render 'equipo/new'
-  end
-
-  get :new, :map => '/equipos' do
-    @equipos = Equipo.all  
-    render 'equipo/all'
-  end
+  # get :new, :map => '/registrar/equipo' do  
+  #   @torneo = Torneo.get(params[:torneo])
+  #   @equipo = Equipo.new
+  #   render 'equipo/new'
+  # end
 
   get :equipos, :with => :torneo do
     @torneo = Torneo.get(params[:torneo])
     @equipos = @torneo.equipos
+    @equipo = Equipo.new
     render 'equipo/all'
   end
 
-  get :create, :with =>:torneo  do
+  get :create,:with =>:torneo do
     @torneo = Torneo.get(params[:torneo])
     @equipo = Equipo.new
     render 'equipo/new'
+  end
+
+  get :edit, :with => :equipo_id do
+    @equipo = Equipo.get(params[:equipo_id])
+    @torneo = @equipo.torneo
+    render 'equipo/edit'
   end
 
   post :create, :with => :torneo do
@@ -48,6 +50,19 @@ Funqui::App.controllers :equipo do
         end
       end
       render 'equipo/new'
+  end
+
+  post :update, :with => :equipo_id do
+    @equipo = Equipo.get(params[:equipo_id])
+    @torneo = @equipo.torneo
+    @equipo.update(params[:equipo])
+    if @equipo.save
+      flash[:success] = 'Equipo editado'
+      redirect "equipo/equipos/#{@torneo.id}"
+    else
+      flash.now[:error] = 'Falta llenar campo'
+      render 'equipo/edit'
+    end  
   end
 
 end
