@@ -1,5 +1,4 @@
 Given(/^Estoy en la pagina de crear torneos$/) do
-  	Torneo.all.destroy
     visit '/registrar/torneo'
 end
 

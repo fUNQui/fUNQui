@@ -1,41 +1,44 @@
-# Feature: Pagina de registrar equipo en un torneo
+Feature: Pagina de registrar equipo en un torneo
 
-# 	Como Administrador
-# 	Quiero poder registrar un equipo en un torneo
+	Como Administrador
+	Quiero poder registrar un equipo en un torneo
 
-# 	Scenario: Equipo registrado exitosamente
-# 		Given Estoy en la pagina de registro de equipo
-# 		When Ingreso el nombre del equipo "Sacachispas"
-# 		And Ingreso el director tecnico "Leandro"
-# 		And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
-# 		And Apreto el boton crear equipo
-# 		Then Veo un mensaje que dice "El equipo Sacachispas fue creado exitosamente"
+	Background:
+        Given Tengo un torneo
 
-# 	Scenario: Falla al registrar el equipo, el equipo ya existe
-# 		Given Estoy en la pagina de registro de equipo
-# 		When Ingreso el nombre del equipo "Sacachispas"
-# 		And Ingreso el director tecnico "Leandro"
-# 		And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
-# 		And Apreto el boton crear equipo
-# 		Then Veo un mensaje que dice "El equipo Sacachispas ya fue registrado"
+	Scenario: Equipo registrado exitosamente
+		Given Estoy en la pagina de registro de equipo
+		When Ingreso el nombre del equipo "Sacachispas"
+		And Ingreso el director tecnico "Leandro"
+		And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
+		And Apreto el boton crear equipo
+		Then Veo un mensaje que dice "El equipo Sacachispas fue creado exitosamente"
 
-	#Scenario: Fallo al registrar un equipo, no se completo el campo nombre de equipo
-		#Given Estoy en la pagina de registro de equipo
-		#When Ingreso el director tecnico "Leandro"
-		#And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
-		#And Apreto el boton crear equipo
-		#Then Veo un mensaje que dice "Falta ingresar el nombre del equipo"
+	Scenario: Falla al registrar el equipo, el equipo ya existe
+		Given Estoy en la pagina de registro de equipo
+		When Ingreso el nombre del equipo "Sacachispas"
+		And Ingreso el director tecnico "Leandro"
+		And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
+		And Apreto el boton crear equipo
+		Then Veo un mensaje que dice "El equipo Sacachispas ya fue registrado"
 
-	#Scenario: Fallo al registrar un equipo, no se completo el campo director tecnico
-		#Given Estoy en la pagina de registro de equipo
-		#When Ingreso el nombre del equipo "Sacachispas"
-		#And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
-		#And Apreto el boton crear equipo
-		#Then Veo un mensaje que dice "Falta ingresar el director tecnico"
+	# Scenario: Fallo al registrar un equipo, no se completo el campo nombre de equipo
+	# 	Given Estoy en la pagina de registro de equipo
+	# 	When Ingreso el director tecnico "Leandro"
+	# 	And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
+	# 	And Apreto el boton crear equipo
+	# 	Then Veo un mensaje que dice "Error"
 
-	#Scenario: Fallo al registrar un equipo, no se completo el campo jugadores
-		#Given Estoy en la pagina de registro de equipo
-		#When Ingreso el nombre del equipo "Sacachispas"
-		#And Ingreso el director tecnico "Leandro"
-		#And Apreto el boton crear equipo
-		#Then Veo un mensaje que dice "Falta ingresar a los jugadores del equipo"
+	# Scenario: Fallo al registrar un equipo, no se completo el campo director tecnico
+	# 	Given Estoy en la pagina de registro de equipo
+	# 	When Ingreso el nombre del equipo "Sacachispas"
+	# 	And Ingreso los jugadores "Juan Nico Santi Esteban Ari"
+	# 	And Apreto el boton crear equipo
+	# 	Then Veo un mensaje que dice "Error"
+
+	# Scenario: Fallo al registrar un equipo, no se completo el campo jugadores
+	# 	Given Estoy en la pagina de registro de equipo
+	# 	When Ingreso el nombre del equipo "Sacachispas"
+	# 	And Ingreso el director tecnico "Leandro"
+	# 	And Apreto el boton crear equipo
+	# 	Then Veo un mensaje que dice "Error"
