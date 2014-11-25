@@ -9,7 +9,6 @@ module Funqui
 
     enable :sessions
 
-
     ##
     # Caching support
     #
@@ -28,6 +27,7 @@ module Funqui
     ##
     # Application configuration options
     #
+    set :protect_from_csrf, false
     # set :raise_errors, true       # Raise exceptions (will stop application) (default for test)
     # set :dump_errors, true        # Exception backtraces are written to STDERR (default for production/development)
     # set :show_exceptions, true    # Shows a stack trace in browser (default for development)

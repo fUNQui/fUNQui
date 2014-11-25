@@ -64,5 +64,19 @@ Funqui::App.controllers :equipo do
       render 'equipo/edit'
     end  
   end
+  
+  delete :destroy, :with => :equipo_id do
+    @equipo = Equipo.get(params[:equipo_id])
+    @torneo = @equipo.torneo
+    
+    if @equipo.destroy
+      flash[:success] = "El equipo #{@equipo.nombre} fue eliminado exitosamente"
+    else
+      flash[:error] = "El equipo #{@equipo.nombre} no se pudo eliminar"
+    end
+    
+    redirect "equipo/equipos/#{@torneo.id}"
+    
+  end
 
 end

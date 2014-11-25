@@ -21,6 +21,7 @@
         </td>    
         <td>
           <%= link_to 'Editar', url_for(:equipo, :edit, :equipo_id => equipo.id), :class => "link" %>
+          <%= link_to 'Eliminar', url_for(:equipo, :destroy, :equipo_id => equipo.id), :method => :delete %>
         </td>
       </tr>
 
