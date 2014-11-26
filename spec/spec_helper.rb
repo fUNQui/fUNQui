@@ -19,11 +19,12 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
   conf.include Capybara
-  DataMapper.setup(:default, "abstract::")
+  DataMapper.auto_migrate!
+  DataMapper.setup(:default, "sqlite3::memory:")
   DataMapper::Logger.new($stdout, :all)
 end
 
 def app
-  Projecto::App.tap { |app|  }
-  Projecto::App.set :protect_from_csrf, false
+  Funqui::App.tap { |app|  }
+  Funqui::App.set :protect_from_csrf, false
 end
