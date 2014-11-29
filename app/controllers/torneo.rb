@@ -1,5 +1,6 @@
 Funqui::App.controllers :torneo do
   
+
   get :new, :map => '/registrar/torneo' do  
     @torneo=Torneo.new
     render 'torneo/new'
@@ -14,6 +15,18 @@ Funqui::App.controllers :torneo do
     @torneos = Torneo.all
     render 'torneo/all'
   end 
+
+  get :generar_partidos, :with => :torneo do
+      torneo = Torneo.get(params[:torneo])
+      @torneos = Torneo.all
+      if(Partido.all(:torneo => torneo).count > 0)
+          flash.now[:error] = 'Los partidos ya fueron generados'
+          render 'torneo/all'
+      else
+        Torneo.generar_partidos(torneo)
+      end
+      
+  end
 
   post :create do
 	   @torneo = Torneo.new(params[:torneo])

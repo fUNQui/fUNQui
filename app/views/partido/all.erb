@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Partidos</div>
+    <table id="tablaPartidos" class="table table-bordered table-hover table-condensed">
+      <tr>
+        <th>Equipo A</th>
+        <th>Resultado</th>
+        <th>Equipo B</th>
+      </tr>
+      <% @partidos.each do |partido| %>
+
+      <tr>
+        <td>
+          <%= partido.equipoA.nombre %>
+        </td>
+        <td>
+          <%= partido.resultado %>
+        </td>
+        <td>
+          <%= partido.equipoB.nombre %>
+        </td>
+      </tr>
+
+      <% end %>
+
+    </table>
+    
+  </div>
+  
+  <a href="/torneos" class="btn btn-success">Atras</a>
+  </br>
+  <div class="col-lg-10 col-lg-offset-10">
+    <a href="" class="btn btn-warning">Ingresar resultados</a>
+  </div>
+</div>

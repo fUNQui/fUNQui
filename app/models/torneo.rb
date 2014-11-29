@@ -27,8 +27,8 @@ class Torneo
       @partido = Partido.new
       @partido.equipoA = eqs[n]
       @partido.equipoB = eqs[i]
-      @partido.resultado = nil
-      @partido.torneo = torneo
+      @partido.resultado = "-"
+      @partido.torneoo = torneo
       @partido.save
     end
   end

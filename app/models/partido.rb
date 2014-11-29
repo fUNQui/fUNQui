@@ -7,4 +7,12 @@ class Partido
 	belongs_to :equipoB, Equipo 
 	belongs_to :torneo
 
+
+	def torneoo
+      torneo
+    end
+
+    def torneoo=(a_torneo)
+      self.torneo = a_torneo
+    end
 end
