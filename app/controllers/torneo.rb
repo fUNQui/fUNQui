@@ -25,7 +25,7 @@ Funqui::App.controllers :torneo do
       else
         Torneo.generar_partidos(torneo)
       end
-      
+      render 'torneo/all'
   end
 
   post :create do
