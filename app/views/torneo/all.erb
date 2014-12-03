@@ -24,12 +24,14 @@
           <%= torneo.comentario %>
         </td>	
         <td>
-          <%= link_to 'Ver Equipos', url_for(:equipo, :equipos, :torneo  => torneo.id), :class => "link" %>
-          <%= link_to 'Agregar Equipos', url_for(:equipo, :create, :torneo => torneo.id), :class => "link" %>
+          <div>
+            <%= link_to 'Ver Equipos', url_for(:equipo, :equipos, :torneo  => torneo.id), :class => "link" %>
+            <%= link_to 'Agregar Equipos', url_for(:equipo, :create, :torneo => torneo.id), :class => "link" %>
+          </div>
+          <div>
           <%= link_to 'Ver partidos', url_for(:partido, :partidos, :torneo => torneo.id), :class => "link" %>
-          <div ng-controller="torneo">
           <%= link_to 'Generar partidos', url_for(:torneo, :generar_partidos, :torneo => torneo.id), :class => "link", :visible => "isVisible" %>
-        </div>
+         </div>
         </td>
       </tr>
 
