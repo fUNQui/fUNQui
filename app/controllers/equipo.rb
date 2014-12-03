@@ -15,8 +15,13 @@ Funqui::App.controllers :equipo do
 
   get :create,:with =>:torneo do
     @torneo = Torneo.get(params[:torneo])
-    @equipo = Equipo.new
-    render 'equipo/new'
+    if(Partido.all(:torneo => @torneo).count > 0)
+        flash[:error] = "El torneo ya esta cerrado"
+        redirect "/torneos"
+    else
+      @equipo = Equipo.new
+      render 'equipo/new'
+    end
   end
 
   get :edit, :with => :equipo_id do

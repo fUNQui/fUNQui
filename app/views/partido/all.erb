@@ -29,6 +29,6 @@
   <a href="/torneos" class="btn btn-success">Atras</a>
   </br>
   <div class="col-lg-10 col-lg-offset-10">
-    <a href="" class="btn btn-warning">Ingresar resultados</a>
+    <%= link_to 'Ingresar resultados', url_for(:partido, :resultados, :torneo => @torneo.id), :class => "btn btn-warning" %>
   </div>
 </div>

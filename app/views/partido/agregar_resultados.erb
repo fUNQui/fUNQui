@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Partidos</div>
+    <table id="tablaPartidosResultados" class="table table-bordered table-hover table-condensed">
+      <tr>
+        <th>Equipo A</th>
+        <th>Resultado</th>
+        <th>Equipo B</th>
+      </tr>
+      <% @partidos.each do |partido| %>
+
+      <tr>
+        <td>
+          <%= partido.equipoA.nombre %>
+        </td>
+        <td>
+          <% form_for(partido, "/partido/update/#{partido.id}", :class => "form-horizontal") do |f| %> 
+              <table id="tablaPartidos"
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-4">
+                <td>
+                <%= f.text_field :resultado, :class => "col-lg-offset-4 form-control", :required => "require" %>
+              </td>
+              <td>
+                <%= f.submit "submit", :class => "col-lg-offset-12 btn btn-primary" %>
+              </td>
+              </div>
+              </div>
+              </div>
+            </table>
+
+          <% end %>
+        </td>
+        <td>
+          <%= partido.equipoB.nombre %>
+        </td>
+      </tr>
+
+      <% end %>
+
+    </table>
+    
+  </div>
+  
+  </br>
+  <div class="col-lg-10 col-lg-offset-10">
+    <%= link_to 'Atras', url_for(:partido, :partidos, :torneo => @torneo.id), :class => "btn btn-primary" %>
+  </div>
+</div>

@@ -5,6 +5,7 @@ class Equipo
   	property :nombre, String
   	property :jugadores, String
   	property :dt, String
+    property :puntos, Integer, :default => 0
   	belongs_to :torneo
 
     validates_presence_of :nombre
