@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Torneos</div>
+    <table id="tablaPosiciones" class="table table-bordered table-hover table-condensed">
+      <tr>
+        <th>Equipo</th>
+        <th>Puntos</th>
+      </tr>
+      <% @equipos.each do |equipo| %>
+
+      <tr>
+        <td>
+          <%= equipo.nombre %>
+        </td>
+        <td>
+          <%= equipo.puntos %>
+        </td>
+      </tr>
+
+      <% end %>
+
+    </table>
+    
+  </div>
+  <a href="/torneos" class="btn btn-success">Atras</a>
+</div>

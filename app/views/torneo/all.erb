@@ -31,6 +31,7 @@
           <div>
           <%= link_to 'Ver partidos', url_for(:partido, :partidos, :torneo => torneo.id), :class => "link" %>
           <%= link_to 'Generar partidos', url_for(:torneo, :generar_partidos, :torneo => torneo.id), :class => "link", :visible => "isVisible" %>
+          <%= link_to 'Ver posiciones', url_for(:posicion, :posiciones, :torneo => torneo.id), :class => "link" %>
          </div>
         </td>
       </tr>

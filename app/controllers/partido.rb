@@ -15,12 +15,12 @@ Funqui::App.controllers :partido do
   end
 
   post :update, :with => :partido_id do
-  	@partido = Partido.get(params[:partido_id])
-    
+    @partido = Partido.get(params[:partido_id])
+    p = @partido.resultado
     @partido.equipoA.save
     @partido.equipoB.save
     @partido.update(params[:partido])
-    Partido.actualizar_puntos(@partido)
+    Partido.actualizar_puntos(@partido,p)
     if @partido.save
       flash[:success] = 'Resultado cargado'
       redirect "/partido/resultados/#{@partido.torneo.id}"
