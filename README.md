@@ -1,9 +1,5 @@
 # fUNQui [![Build Status](https://travis-ci.org/fUNQui/fUNQui.svg?branch=master)](https://travis-ci.org/fUNQui/fUNQui)
 
-Aplicación para crear torneos de futboll.
-
-[http://fUNQui.herokuapp.com](http://funqui.herokuapp.com/)
-
 Como correr la aplicación y tests:
 
 * Una vez clonado el repositorio, realizar los siguientes pasos:
